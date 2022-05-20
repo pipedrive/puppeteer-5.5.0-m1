@@ -101,11 +101,6 @@
     "ts-node": "^9.0.0",
     "typescript": "3.9.5"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
-    }
-  },
   "standard-version": {
     "skip": {
       "commit": true,

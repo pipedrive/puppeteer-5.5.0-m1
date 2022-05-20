@@ -104,7 +104,7 @@ class ChromeLauncher implements ProductLauncher {
     }
 
     let chromeExecutable = executablePath;
-    if (os.arch() === 'arm64') {
+    if (os.arch() === 'arm64' && !chromeExecutable) {
       chromeExecutable = '/usr/bin/chromium-browser';
     } else if (!executablePath) {
       const { missingText, executablePath } = resolveExecutablePath(this);

@@ -285,7 +285,7 @@ export class BrowserFetcher {
     if (await existsAsync(outputPath)) return this.revisionInfo(revision);
     if (!(await existsAsync(this._downloadsFolder)))
       await mkdirAsync(this._downloadsFolder);
-    if (os.arch() === 'arm64') {
+    if (os.arch() === 'arm64' && this._platform !== 'mac') {
       handleArm64();
       return;
     }
